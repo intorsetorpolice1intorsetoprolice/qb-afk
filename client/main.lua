@@ -22,7 +22,6 @@ Citizen.CreateThread(function()
         Wait(1000)
         local playerPed = PlayerPedId()
         if LocalPlayer.state['isLoggedIn'] then
-            if group == 'user' then
                 currentPos = GetEntityCoords(playerPed, true)
                 if prevPos ~= nil then
                     if currentPos == prevPos then
@@ -58,6 +57,5 @@ Citizen.CreateThread(function()
                 end
                 prevPos = currentPos
             end
-        end
     end
 end)
